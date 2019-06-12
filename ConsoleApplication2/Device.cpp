@@ -4,9 +4,14 @@
 
 Device::Device()
 {
+
+
+	int i = 0;
 }
 
 
 Device::~Device()
 {
+
+
 }

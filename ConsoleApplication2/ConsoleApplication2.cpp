@@ -9,6 +9,9 @@
 
 int main()
 {
+
+
+
 	//vector of 3 filled with 10
 	std::vector<int>myVec(10, 10);
 	//push 12345 to the end
@@ -32,8 +35,11 @@ int main()
 //class
 class Device {
 public:
+	Device();
+	~Device();
 
 private:
+	int serialNumber;
 
 };
 
