@@ -32,24 +32,28 @@ int main()
 
 } 
 
-//class
+//define class
 class Device {
 public:
 	Device();
 	~Device();
-
+	void virtual DeviceOn();
 private:
 	int serialNumber;
 
 };
 
-
 //Derived class
 class Wireless :public Device {
 public:
-
+	void DeviceOn();
 private:
 };
+
+//define class
+void Device::DeviceOn() {}
+
+void Wireless::DeviceOn() {}
 
 //Overload
 float myFunc(float a, float b)
@@ -61,7 +65,26 @@ float myFunc(float a, float b, float c)
 {
 	return a + b + c;
 }
+
+
 //Override
+//.h
+class Base {
+public:
+	//pure virtual cause it ends in = zero otherwise compiler complains it cannot find definition
+	virtual void On()=0;
+};
+class Derived :Base {
+public:
+	void On() override;
+};
+
+void Derived::On() 
+{
+
+}
+
+//.cpp
 
 
 //copy constructor
